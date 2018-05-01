@@ -1,0 +1,523 @@
+/* GENERAL STYLES*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font: normal 16px sans-serif;
+	color: black;
+}
+
+nav {
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+	opacity: 0.75;
+}
+
+a:hover {
+	opacity: 1;
+}
+
+section{
+	display: flex;
+	flex-direction: column;
+	padding: 60px 80px;
+}
+section h2 {
+	font: normal 40px "Source Sans Pro", sans-serif;
+	font-weight: 200;
+	margin-bottom: 40px;
+}
+
+.grid {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+hr {
+	border: 0;
+	width: 90%;
+	height: 1px;
+	margin-bottom: 50px;
+	background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.5), rgba(0,0,0,0)) ;
+	align-self: center;
+}
+
+ul {
+	list-style: none;
+}
+
+section:not(.hero):nth-child(odd) {
+	background-color: rgba(0, 77, 64, .2);
+}
+
+@media (max-width: 800px) {
+	section{
+		padding: 50px 20px;
+	}
+}
+
+.page-link {
+	font: bold 30px "Source Sans Pro", sans-serif;
+	font-weight: 200;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	color: #4a148c
+}
+
+/* HEADER STYLES*/
+
+header{
+	position: absolute;
+	width: 100%;
+	z-index: 1;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 35px 50px 0;
+	background-color: rgba(0, 77, 64, .9);
+	max-height: 150px;
+	opacity: 0;
+	animation: 1s fadein 0.5s forwards;
+}
+
+@keyframes fadein {
+	100% {
+		opacity: 1;
+	}
+}
+
+header h2 {
+	font: bold "Source Sans Pro", sans-serif;
+	text-transform: uppercase;
+	font-weight: 200;
+	color: #fff;
+}
+
+header nav {
+	display: flex;
+	margin-right: -15px;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+header nav li {
+	margin: 0 15px;
+	font-family: "Source Sans Pro", sans-serif;
+	font-weight: 300;
+	text-transform: uppercase;
+	color: #fff
+}
+
+header .header-link{
+	color: white;
+}
+
+header .active {
+	border-bottom: 3px solid white;
+}
+
+@media screen and (max-width: 900px) {
+	header {
+		padding: 20px 50px;
+		flex-direction: column;
+	}
+
+	header h2 {
+		margin-bottom: 15px;
+	}
+	header nav li {
+		font-size: 15px;
+	}
+	header nav {
+		flex-direction: column;
+		margin: 0;
+		width: 100%;
+		align-items: center;
+	}
+}
+
+/* HERO SECTION */
+
+.hero{
+	position: relative;
+	justify-content: center;
+	text-align: center;
+	max-height: 100vh
+}
+
+.homepage-image {
+	background-image: url(/images/Main/JenniferSanford-AloePlant.jpg);
+}
+
+.hero .background-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	z-index: -1;
+	background-color: teal;
+}
+
+.hero h1 {
+	font: normal 30px "Open Sans Condensed", sans-serif;
+}
+
+.hero p {
+	font: normal 20px "Open Sans Condensed", sans-serif;
+}
+
+.hero-content{
+	position: relative;
+	background: rgba(255,255,255,0.7);
+	max-width: 300px;
+	border-radius: 20px;
+	top: 50vh;
+	left: 0vw;
+	padding: 10px;
+	margin-top: 100px;
+	animation: 1s slidein 1s forwards;
+	opacity: 0;
+}
+
+@keyframes slidein {
+	100% {
+		opacity: 1;
+		margin-top: 0;
+	}
+}
+
+.arrow{
+  color: rgba(255,255,255,.6);
+  position: absolute;
+  margin-left: 10vh;
+  margin-top: 60vh;
+}
+.bounce {
+    display: inline-block;
+    position: relative;
+    -moz-animation: bounce 2s infinite linear;
+    -o-animation: bounce 2s infinite linear;
+    -webkit-animation: bounce 2s infinite linear;
+    animation: bounce 2s infinite linear;
+}
+
+@-webkit-keyframes bounce {
+    0% { top: 0; }
+    50% { top: -0.2em; }
+    70% { top: -0.3em; }
+    100% { top: 0; }
+}
+@-moz-keyframes bounce {
+    0% { top: 0; }
+    50% { top: -0.2em; }
+    70% { top: -0.3em; }
+    100% { top: 0; }
+}
+@-o-keyframes bounce {
+    0% { top: 0; }
+    50% { top: -0.2em; }
+    70% { top: -0.3em; }
+    100% { top: 0; }
+}
+@-ms-keyframes bounce {
+    0% { top: 0; }
+    50% { top: -0.2em; }
+    70% { top: -0.3em; }
+    100% { top: 0; }
+}
+@keyframes bounce {
+    0% { top: 0; }
+    50% { top: -0.2em; }
+    70% { top: -0.3em; }
+    100% { top: 0; }
+}
+
+/* Interests Section */
+
+.interests .grid li {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 200px;
+	width: 200px;
+	margin: 30px;
+	background-color: rgba(255,255,255,0.6);
+	border-radius: 50%;
+	opacity: .75;
+	box-shadow: 4px 4px 10px rgba(0,0,0,0.5);
+}
+
+.interests .interest-title {
+	padding: 15px;
+}
+
+
+/* Outro Section */
+
+.outro h1 {
+	font: normal 40px "Open Sans Condensed", sans-serif;
+	padding-bottom: 10px;
+}
+
+.outro p {
+	font: normal 20px "Open Sans Condensed", sans-serif;
+	padding-bottom: 10px;
+}
+
+
+
+.fa-arrow-right {
+	margin-left: 20px;
+	display: inline-block;
+    position: relative;
+    -moz-animation: slide 2s infinite linear;
+    -o-animation: slide 2s infinite linear;
+    -webkit-animation: slide 2s infinite linear;
+    animation: slide 2s infinite linear;
+}
+
+@keyframes slide {
+    0% { left: 0; }
+    50% { left: -0.3em; }
+    70% { left: -0.5em; }
+    100% { left: 0; }
+}
+
+@-webkit-keyframes slide {
+    0% { left: 0; }
+    50% { left: -0.3em; }
+    70% { left: -0.5em; }
+    100% { left: 0; }
+}
+
+@-moz-keyframes slide {
+    0% { left: 0; }
+    50% { left: -0.3em; }
+    70% { left: -0.5em; }
+    100% { left: 0; }
+}
+
+@-o-keyframes slide {
+    0% { left: 0; }
+    50% { left: -0.3em; }
+    70% { left: -0.5em; }
+    100% { left: 0; }
+}
+
+@-ms-keyframes slide {
+    0% { left: 0; }
+    50% { left: -0.3em; }
+    70% { left: -0.5em; }
+    100% { left: 0; }
+}
+
+
+/* FOOTER */
+footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	background-color: #E1E2E1;
+	padding: 20px 0;
+}
+
+footer ul {
+	display: flex;
+}
+footer p {
+	align-self: center;
+
+}
+
+footer ul li {
+	margin-left: 16px;
+}
+
+footer .footer-link {
+	color: black;
+	opacity: 0.65;
+}
+
+footer .footer-link:hover {
+	opacity: 1;
+}
+
+@media screen and (max-width: 1100px) {
+	footer {
+		flex-direction: column;
+	}
+	footer p {
+		margin-bottom: 20px;
+	}
+	footer ul li {
+		margin: 0 8px;
+	}
+}
+
+
+/*-------------------------------------------------------*/
+/*About Page*/
+
+/*Top Section*/
+.top-section {
+	padding-top: 150px;
+	padding-bottom: 0;
+}
+
+@media screen and (max-width: 900px){
+	.top-section {
+		padding-top: 200px;
+	}
+}
+
+.top-section h1 {
+	font: normal 50px "Open Sans Condensed", sans-serif;
+	align-self: center;
+}
+
+/*RESUME SECTION*/
+.resume {
+	align-items: center;
+	text-align: center;
+}
+.resume a {
+	font: normal 30px "Open Sans Condensed", sans-serif;
+	padding: 10px;
+	margin-bottom: 20px;
+	background-color: rgba(255,255,255,0.8);
+	border-radius: 20px;
+	box-shadow: 4px 4px 10px rgba(0,0,0,0.5);
+	color: black;
+	opacity: .75;
+
+}
+
+.resume a:hover{
+	transition: .5s ease-in;
+	transform: scale(1.05);
+	opacity: 1;
+}
+
+/*picture section*/
+
+.about-pics .grid li {
+	height: 500px;
+	padding: 20px;
+	background-clip: content-box;
+	background-size: cover;
+	background-position: center;
+	flex-basis: 40%;
+	vertical-align: center;
+}
+.about-pics .grid li:first-child{
+	height: 400px;
+	opacity: .8;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+}
+.about-pics .grid li p {
+	padding: 10px;
+	margin-bottom: 20px;
+	font: normal 20px "Open Sans Condensed", sans-serif;
+}
+
+@media (max-width: 1100px){
+	.about-pics .grid li{
+		flex-basis: 50%;
+	}
+}
+
+@media (max-width: 800px){
+	.about-pics .grid li{
+		flex-basis: 100%;
+	}
+}
+
+/*PERSONAL INTERESTS*/
+.personal-interests h1 {
+	text-align: center;
+	text-transform: uppercase;
+	font: normal 40px "Open Sans Condensed", sans-serif;
+}
+.personal-interests .grid li {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 200px;
+	width: 200px;
+	margin: 30px;
+	background-color: rgba(255,255,255,0.6);
+	border-radius: 50%;
+	opacity: .75;
+	box-shadow: 4px 4px 10px rgba(0,0,0,0.5);
+}
+
+.personal-interests .interest-title {
+	padding: 15px;
+}
+
+/*-----------------------------------------------------*/
+/*Current and Past Projects Page*/
+
+/* Project sections*/
+.project p {
+	padding-top: 20px;
+}
+
+.brand-icon{
+  height: 40px;
+}
+.TK-button{
+  font: normal 20px "Open Sans Condensed", sans-serif;
+  font-weight: 200;
+  background-color: white;
+  width: 220px;
+  border-radius: 10px;
+  color: black;
+  box-shadow: 1px 2px 10px 3px #888888;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.TK-button a {
+	color: black;
+}
+
+.TK-button:hover{
+  transform: scale(1.05);
+  transition: all .2s ease-in-out;
+}
+
+/*----------------------------------------------------*/
+/* Recent Coursework*/
+
+.course h4 {
+	font: 40px "Open Sans Condensed", sans-serif;
+}
+
+.course h5 {
+	font: 30px "Open Sans Condensed", sans-serif;
+}
+.course p {
+	padding-top: 20px;
+}
+
+.course {
+	padding: 40px;
+}
