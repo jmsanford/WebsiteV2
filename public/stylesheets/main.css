@@ -55,7 +55,7 @@ ul {
 	list-style: none;
 }
 
-section:not(.hero):nth-child(odd) {
+section:not(.outro):nth-child(odd) {
 	background-color: rgba(0, 77, 64, .2);
 }
 
@@ -64,6 +64,7 @@ section:not(.hero):nth-child(odd) {
 		padding: 50px 20px;
 	}
 }
+
 
 .page-link {
 	font: bold 30px "Source Sans Pro", sans-serif;
