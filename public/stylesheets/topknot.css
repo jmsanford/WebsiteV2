@@ -91,10 +91,12 @@ body {
 
 .caption-text {
   position: absolute;
-  padding: 2px;
+  padding-left: 5px;
+  padding-right: 5px;
   top: 8px;
   left:22px;
-  background-color: rgba(255,255,255,.5)
+  background-color: rgba(255,255,255,.7);
+  border-radius: 5px;
 }
 
 .main-page{
@@ -165,7 +167,7 @@ body {
   transform: scale(1.05);
 }
 .hours-box{
-  background-color: rgb(165, 93, 53);
+  background-color: rgb(128,0,0);
   border-radius: 10px;
   width: 330px;
   margin: auto;
@@ -173,7 +175,7 @@ body {
   box-shadow: 5px 5px 15px rgba(0,0,0,.5);
 }
 .hours-list{
-  color: white;
+  color: rgba(255,255,255,0.9);
   list-style-type: none;
   font-size: 1.5em;
   padding-left: 5%;
