@@ -168,8 +168,28 @@ header .active {
 	background-size: cover;
 	z-index: -1;
 	background-color: teal;
+	animation: fadeIn 2s;
 }
-
+@-webkit-keyframes fadeIn {
+   from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-moz-keyframes fadeIn {
+  from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-o-keyframes fadeIn {
+  from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-ms-keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@keyframes fadeIn {
+   from { opacity: 0; }
+    to   { opacity: 1; }
+}
 .hero h1 {
 	font: normal 30px "Open Sans Condensed", sans-serif;
 }
