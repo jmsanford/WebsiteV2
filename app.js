@@ -22,16 +22,16 @@ app.get("/projects", function(req,res){
   res.render("projects", {page: 'projects'})
 });
 
+app.get("/courses", function(req,res){
+  res.render("courses", {page: 'courses'})
+});
+
 app.get("/color-game", function(req,res){
-  res.render("colorGame/colorGame", {page: 'color-game'})
+  res.render("colorGame/index", {page: 'color-game'})
 });
 
 app.get("/color-tile-generator", function(req,res){
-  res.render("colorTileGenerator/colorTileGenerator", {page: 'color-tile-generator'})
-});
-
-app.get("/courses", function(req,res){
-  res.render("courses", {page: 'courses'})
+  res.render("colorTileGenerator/index", {page: 'color-tile-generator'})
 });
 
 
