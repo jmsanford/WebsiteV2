@@ -26,12 +26,12 @@ app.get("/courses", function(req,res){
   res.render("courses", {page: 'courses'})
 });
 
-app.get("/color-game", function(req,res){
-  res.render("colorGame/index", {page: 'color-game'})
+app.get("/colorGame", function(req,res){
+  res.render("colorGame/index")
 });
 
-app.get("/color-tile-generator", function(req,res){
-  res.render("colorTileGenerator/index", {page: 'color-tile-generator'})
+app.get("/colorTileGenerator", function(req,res){
+  res.render("colorTileGenerator/index")
 });
 
 
